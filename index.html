@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rahmi Mart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="container">
+  <h2> Login Admin</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- KASIR -->
+ <div class="container" id="kasirBox" style="display:none">
+  <h2>Rahmi Mart</h2>
+<div class="container">
+  <h3>Riwayat Transaksi</h3>
+  <div id ="riwayatList"></div>
+</div>
+
+  <input type="text" id="nama" placeholder="Nama Barang">
+  <input type="text" id="harga" placeholder="Harga">
+  <input type="text" id="jumlah" placeholder="jumlah">
+
+  <button onclick="tambahBarang()">Tambah Barang</button>
+
+  <table id="tabelBarang">
+    <thead>
+      <tr>
+        <th>Barang</th>
+        <th>Harga</th>
+        <th>Jumlah</th>
+        <th>Total</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+
+  <h3>Total: Rp <span id="total">0</span></h3>
+
+  <button onclick="resetKasir()">Reset</button>
+  <button onclick="cetakStruk()">Cetak Struk</button>
+  <button onclick="hapusRiwayat()">Hapus Riwayat</button>
+ </div>
+
+ <!-- STRUK -->
+ <div id="strukBox" style="display:none">
+  <h3>Struk Pembelian</h3>
+  <div id="isiStruk"></div>
+  <hr>
+  <p id="totalStruk"></p>
+  <p id="tanggal"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
